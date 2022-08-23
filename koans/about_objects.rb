@@ -1,4 +1,6 @@
-require File.expand_path(File.dirname(__FILE__) + '/neo')
+# frozen_string_literal: true
+
+require File.expand_path("#{File.dirname(__FILE__)}/neo")
 
 class AboutObjects < Neo::Koan
   def test_everything_is_an_object
