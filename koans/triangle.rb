@@ -14,6 +14,9 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  raise TriangleError, 'The size of the sides must be greater than zero' if a <= 0 || b <= 0 || c <= 0
+  raise TriangleError, 'The sum of two sides cannot be less than the third side' if (a + b <= c) || (a + c <= b) || (b + c <= a)
+
   if a == b && a == c
     :equilateral
   elsif a == b && a != c || a == c && a != b || b == c && b != a
